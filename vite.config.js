@@ -9,6 +9,13 @@ export default defineConfig({
             preprocess: autoPreprocess()
         })
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                dir: 'build'
+            }
+        }
+    },
     resolve: {
         alias: [
             { find: '@scss', replacement: '/src/assets/scss' },
