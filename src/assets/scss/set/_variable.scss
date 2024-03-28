@@ -1,8 +1,21 @@
-$theme:#E94823;
+$theme:#EFC3C5;
+$dark:#2F4858;
 
 $tablet:1200px;
 $mobile:768px;
 $landscape:500px;
+
+@mixin absDefault($top:0, $left:0){
+    position:absolute;
+    top:$top;
+    left:$left
+}
+
+@mixin circle($r){
+    width:$r;
+    height:$r;
+    border-radius:50%
+}
 
 @mixin fontWeight($w){
     font-variation-settings:'wght' $w
@@ -22,5 +35,18 @@ $landscape:500px;
         @media (min-width:$width){
             @content
         }
+    }
+}
+
+
+@keyframes text{
+    to{
+        transform:scale(1) translate(0);
+        opacity:1
+    }
+}
+@keyframes bounce{
+    to{
+        transform:translateY(-16px)
     }
 }

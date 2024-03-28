@@ -1,12 +1,10 @@
 import Matter from 'matter-js';
 
-
-
 export const visualBall = () => {
     let ww = 1920, hh = window.innerHeight;
     let particles = [];
     let points = [[0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0]];
-    let colors = ['#464646', '#474554', '#ACA9BB', '#2B4C42', '#5B7D72'];
+    let colors = ['#EFC3C5', '#CBA7B5', '#A48DA3', '#7B758E', '#535E75', '#2F4858']
     const visual = document.querySelector('.visual_in');
     const Engine = Matter.Engine,
                 Render = Matter.Render,
@@ -37,7 +35,7 @@ export const visualBall = () => {
     Render.run(render);
     Runner.run(runner, engine);
     
-    engine.gravity.y = 0.9;
+    engine.gravity.y = 0.95;
     Composite.clear(world);
 
     let triA = new Polygon(ww*0.7, hh*0.38, 3, 170, 10),
@@ -125,7 +123,7 @@ export const visualBall = () => {
             label: 'static',
             chamfer: {radius: [r]},
             render: {
-                fillStyle: colors[Math.round(Common.random(0, 4))]
+                fillStyle: colors[Math.round(Common.random(0, 5))]
             }
         });
         this.con = Constraint.create({
@@ -142,7 +140,7 @@ export const visualBall = () => {
             restitution: 1,
             label: 'static',
             render: {
-                fillStyle: colors[Math.round(Common.random(0, 4))]
+                fillStyle: colors[Math.round(Common.random(0, 5))]
             }
         });
         this.con = Constraint.create({
@@ -165,7 +163,7 @@ export const visualBall = () => {
             chamfer: {radius: [r]},
             inertia,
             render: {
-                fillStyle: colors[Math.round(Common.random(0, 4))]
+                fillStyle: colors[Math.round(Common.random(0, 5))]
             }
         });
         this.con = Constraint.create({
@@ -182,7 +180,7 @@ export const visualBall = () => {
         this.partA = Bodies.rectangle(x, y, w, h, {
             label: 'cross',
             render: {
-                fillStyle: colors[Math.round(Common.random(0, 4))]
+                fillStyle: colors[Math.round(Common.random(0, 5))]
             }
         });
         this.partB = Bodies.rectangle(x, y, h, w, {
@@ -208,7 +206,7 @@ export const visualBall = () => {
             let x = Common.random(100, render.canvas.width - 100),
                 y = Common.random(-30, 30),
                 size = Common.random(min, max),
-                num = Math.round(Common.random(0, 4));
+                num = Math.round(Common.random(0, 5));
             const p = Bodies.circle(x, y, size, {
                 restitution: 0,
                 friction: 0,

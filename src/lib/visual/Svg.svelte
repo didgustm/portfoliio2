@@ -1,4 +1,4 @@
-<svg>
+<svg class="sketch">
     <circle class="visualBall" />
     <clipPath id="clip">
         <circle class="visualBall" />
@@ -18,7 +18,7 @@
         <tspan x="50%" dy="96">LANDING PAGE</tspan>
         <tspan x="50%" dy="99">PORTFOLIO</tspan>
     </text>
-    <text fill="#fff" stroke="#fff"x="0" dx="50%" y="50%" text-anchor="middle" alignment-baseline="central" clip-path="url(#clip)">
+    <text fill="#fff" stroke="#fff"x="0" dx="50%" y="50%" text-anchor="middle" alignment-baseline="central" clip-path="url(#clip)" class="clipText">
         <tspan dy="-99">WEBSITE</tspan>
         <tspan x="50%" dy="96">LANDING PAGE</tspan>
         <tspan x="50%" dy="99">PORTFOLIO</tspan>

@@ -1,8 +1,16 @@
 <script>
+    import { onMount } from 'svelte';
+    import { scroll } from './assets/js/scroll';
     import '@scss/set/common.scss'
-    import Index from './lib/visual/Index.svelte';
+    import Quick from './lib/common/Quick.svelte'
+    import Visual from './lib/visual/Visual.svelte';
+
+    onMount(() => {
+        scroll()
+    })
 </script>
 
+<Quick />
 <div class="pin">
-    <Index />
+    <Visual />
 </div>
