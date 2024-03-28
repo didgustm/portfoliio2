@@ -1,0 +1,26 @@
+$theme:#E94823;
+
+$tablet:1200px;
+$mobile:768px;
+$landscape:500px;
+
+@mixin fontWeight($w){
+    font-variation-settings:'wght' $w
+}
+
+@mixin setFont($size, $w:400){
+    font-size:$size;
+    @include fontWeight($w)
+}
+
+@mixin custom($width, $minmax:max){
+    @if($minmax == max){
+        @media (max-width:$width){
+            @content
+        }
+    } @else{
+        @media (min-width:$width){
+            @content
+        }
+    }
+}

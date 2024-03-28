@@ -1,0 +1,30 @@
+@use '@scss/set/variable' as var;
+
+.visual{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    background:radial-gradient(#f3f3f3, #f0f0f0, #fff);
+    @include var.setFont(9rem, 700);
+    svg{
+        position:absolute;
+        top:0;
+        left:50%;
+        width:1920px;
+        height:100vh;
+        transform:translateX(-50%);
+        z-index:1
+    }
+    canvas{
+        position:absolute;
+        top:0;
+        left:50%;
+        transform:translateX(-50%);
+        z-index:-1
+    }
+    .visualBall{
+        transform-origin:50% !important;
+        transform-box:fill-box
+    }
+}

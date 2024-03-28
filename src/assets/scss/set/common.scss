@@ -1,0 +1,42 @@
+@use './variable' as var;
+@import './font';
+@import './reset';
+
+/**** Default ****/
+html{
+    font-size: 62.5%;
+    font-family: mont, pre;
+    touch-action: manipulation;
+    overflow-x:hidden;
+    @include var.custom(var.$tablet){
+        font-size:0.85vw
+    }
+    @include var.custom(var.$mobile){
+        font-size:1.3021vw
+    }
+    @include var.custom(320px){
+        font-size:1.45vw
+    }
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: -.04em;
+    word-break: keep-all;
+    color:#272727;
+    @include var.fontWeight(400)
+}
+section{
+    position:relative;
+    width:100%;
+    z-index:1
+}
+.inner{
+    max-width:1280px;
+    height:100%;
+    margin:0 auto;
+    padding:0 4rem
+}
+.title{
+    @include var.setFont(6rem, 700)
+}
