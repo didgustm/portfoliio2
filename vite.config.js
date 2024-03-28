@@ -12,7 +12,20 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                dir: 'build'
+                dir: 'build',
+                assetFileNames: (assetInfo) => {
+					let extType = assetInfo.name.split('.').at(1);
+					if(/css/i.test(extType)) {
+						extType = 'css';
+					} else if(/png|jpe?g|svg|webp/i.test(extType)){
+						extType = 'images';
+					} else if(/woff|woff2/i.test(extType)){
+						extType = 'fonts'
+					}
+					return `assets/${extType}/[name].[hash].[extname]`;
+				},
+				chunkFileNames: 'assets/js/[name].[hash].js',
+				entryFileNames: 'assets/js/[name].[hash].js'
             }
         }
     },
