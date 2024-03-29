@@ -13,12 +13,12 @@
             d="M465.45693556028755,296.73121642382284 L437.7405495849489,285.2507134528702 495.14306443971236,146.66878357617713 522.859450415051,158.14928654712983z"
         ></path>
     </clipPath>
-    <text fill="#464646" x="0" dx="50%" y="50%" text-anchor="middle" alignment-baseline="central" class="staticText">
+    <text fill="#464646" x="0" dx="50%" y="51%" text-anchor="middle" alignment-baseline="central" class="staticText">
         <tspan dy="-99">WEBSITE</tspan>
         <tspan x="50%" dy="96">LANDING PAGE</tspan>
         <tspan x="50%" dy="99">PORTFOLIO</tspan>
     </text>
-    <text fill="#fff" stroke="#fff"x="0" dx="50%" y="50%" text-anchor="middle" alignment-baseline="central" clip-path="url(#clip)" class="clipText">
+    <text fill="#fff" stroke="#fff"x="0" dx="50%" y="51%" text-anchor="middle" alignment-baseline="central" clip-path="url(#clip)" class="clipText">
         <tspan dy="-99">WEBSITE</tspan>
         <tspan x="50%" dy="96">LANDING PAGE</tspan>
         <tspan x="50%" dy="99">PORTFOLIO</tspan>

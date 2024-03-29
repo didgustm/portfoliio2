@@ -1,5 +1,6 @@
-$theme:#EFC3C5;
-$dark:#2F4858;
+$theme:#ED6075;
+$dark:#464646;
+$light:#f3f7fb;
 
 $tablet:1200px;
 $mobile:768px;
@@ -9,6 +10,17 @@ $landscape:500px;
     position:absolute;
     top:$top;
     left:$left
+}
+
+@mixin flex($w:flex-start, $h:flex-start, $wrap:wrap, $dir:row){
+    display:flex;
+    justify-content:$w;
+    align-items: $h;
+    flex-flow:$dir $wrap
+}
+
+@mixin flexDefault(){
+    @include flex(space-between, center)
 }
 
 @mixin circle($r){
@@ -26,6 +38,17 @@ $landscape:500px;
     @include fontWeight($w)
 }
 
+@mixin pseudo($w, $h, $type:position){
+    content:"";
+    @if($type == position){
+        position:absolute
+    } @else if($type == block){
+        display:block
+    }
+    width:$w;
+    height:$h
+}
+
 @mixin custom($width, $minmax:max){
     @if($minmax == max){
         @media (max-width:$width){
@@ -39,7 +62,7 @@ $landscape:500px;
 }
 
 
-@keyframes text{
+@keyframes fade{
     to{
         transform:scale(1) translate(0);
         opacity:1

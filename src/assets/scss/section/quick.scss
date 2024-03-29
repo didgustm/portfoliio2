@@ -2,13 +2,15 @@
 
 .quick{
     position:fixed;
-    top:50%;
+    top:calc(50% - 114px);
     right:3rem;
     padding:3rem 2rem;
     text-align:center;
-    color:#464646;
+    color:var.$dark;
     overflow:hidden;
-    transform:translateY(-50%);
+    transform:translateX(50%);
+    opacity:0;
+    animation:fade 0.8s ease 1s forwards;
     z-index:99;
     .line{
         @include var.absDefault();

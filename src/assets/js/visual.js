@@ -4,7 +4,7 @@ export const visualBall = () => {
     let ww = 1920, hh = window.innerHeight;
     let particles = [];
     let points = [[0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0]];
-    let colors = ['#EFC3C5', '#CBA7B5', '#A48DA3', '#7B758E', '#535E75', '#2F4858']
+    let colors = ['#ED6075', '#C75B8E', '#965C97', '#645B8E', '#3E5476', '#2F4858']
     const visual = document.querySelector('.visual_in');
     const Engine = Matter.Engine,
                 Render = Matter.Render,

@@ -1,10 +1,43 @@
 @use '@scss/set/variable' as var;
 
 .visual{
-    @include var.absDefault();
-    height:100vh;
-    background:radial-gradient(#f3f3f3, #f0f0f0, #fff);
-    @include var.setFont(9rem, 700);
+    //background:radial-gradient(#f3f3f3, #f0f0f0, #fff);
+    background:var.$light;
+    @include var.setFont(8rem, 700);
+    .bg{
+        position:absolute;
+        width:50rem;
+        height:50rem;
+        border-radius:100%;
+        opacity:0.3;
+        filter:blur(76px);
+        z-index:-1;
+        &.bg01{
+            top:-30rem;
+            left:-10rem;
+            background:#965C97
+        }
+        &.bg02{
+            top:-35rem;
+            left:20%;
+            background:#645B8E
+        }
+        &.bg03{
+            top:-25rem;
+            left:40%;
+            background:#3E5476
+        }
+        &.bg04{
+            top:-40rem;
+            right:20rem;
+            background:#C75B8E
+        }
+        &.bg05{
+            top:-20rem;
+            right:-20rem;
+            background:#C75B8E
+        }
+    }
     .sketch{
         @include var.absDefault(0, 50%);
         width:1920px;
@@ -21,7 +54,7 @@
         }
         text{
             opacity:0;
-            animation:text 0.8s ease 0.4s forwards
+            animation:fade 0.8s ease 0.4s forwards
         }
     }
     canvas{

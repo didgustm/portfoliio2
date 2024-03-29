@@ -8,9 +8,9 @@
     <svg class="line">
         <path
             d="M20,2 L42,2 Q59,2 59,20 L59,208 Q59,225 42,225 L20,225 Q2,225 2,208 L2,20 Q2,2 20,2"
-            fill="#fff"
-            stroke="#272727"
-            stroke-width="3"
+            fill="rgba(255,255,255,.5)"
+            stroke="#ED6075"
+            stroke-width="4"
             class="tail"
         />
     </svg>

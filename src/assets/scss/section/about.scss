@@ -1,0 +1,117 @@
+@use '@scss/set/variable' as var;
+
+.about{
+    background:var.$light;
+    perspective:1280px;
+    opacity:0;
+    z-index:-1;
+    .top{
+        position:relative;
+        @include var.flexDefault();
+        width:100%;
+        transform:translateY(calc(50% + 8rem));
+        z-index:1
+    }
+    .date{
+        color:#b7b7b7
+    }
+    .name{
+        @include var.fontWeight(500)
+    }
+    .inner{
+        position:relative;
+        @include var.flex(center, stretch, wrap, column);
+        gap:6rem
+    }
+    .info{
+        position:relative;
+        @include var.flex(flex-start, center);
+        gap:2rem;
+        padding-top:3rem;
+        .image{
+            @include var.circle(7rem);
+            overflow:hidden;
+            background:var.$dark
+        }
+    }
+    .barbaB{
+        position:absolute;
+        bottom:0;
+        left:0;
+        @include var.circle(7rem);
+        transform:scale(45);
+        background:var.$dark;
+        z-index:3
+    }
+    .career{
+        position:relative;
+        transform:translateY(50%);
+        opacity:0;
+        &::after{
+            @include var.pseudo(1px, auto);
+            top:1rem;
+            bottom:1rem;
+            left:0.4rem;
+            background:#e1e1e1;
+            z-index:-1
+        }
+        li{
+            @include var.flex(flex-start, center);
+            gap:3rem;
+            &:nth-child(n+2){
+                padding-top:7rem
+            }
+        }
+        .dot{
+            @include var.circle(0.8rem);
+            background:var.$theme
+        }
+        .date{
+            min-width:150px
+        }
+    }
+    .skills{
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap:2rem;
+        li{
+            --dot:#ED6075;
+            flex-shrink:0;
+            position:relative;
+            @include var.flex(space-between, flex-start, wrap, column);
+            padding:5rem 4rem 3rem;
+            background:#fff;
+            border:1px solid var.$theme;
+            opacity:0;
+            transform:translateY(50%);
+            &:nth-child(even){
+                --dot:#fff;
+                background:var.$theme;
+                color:#fff;
+                transform:translateY(-50%)
+            }
+        }
+        dt{
+            @include var.setFont(2.4rem, 600);
+            padding-bottom:1rem
+        }
+        dd{
+            line-height:30px;
+            @include var.fontWeight(300)
+        }
+        .icon{
+            position:relative;
+            @include var.flex(flex-end);
+            width:100%;
+            margin-top:4rem
+        }
+        .dot{
+            position:absolute;
+            top:-2rem;
+            right:2rem;
+            @include var.circle(5rem);
+            background:var(--dot);
+            opacity:0.15
+        }
+    }
+}
