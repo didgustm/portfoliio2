@@ -42,7 +42,13 @@ export const scroll = () => {
     .to('.about .top', { y:0, duration:2 }, '<')
     .to('.skills li', { opacity:1, y:0, yPercent:0, duration:2 })
     .to('.about .inner', { rotateX:45, delay:2 })
-    .to('.about', { opacity:0 }, '<')
+    .to('.about', { opacity:0, 
+        onComplete: () => zIndex('portfolio', 1),
+        onReverseComplete: () => zIndex('portfolio', -1)
+    }, '<')
+    .to('.portfolio', { opacity:1 }, '<')
+    .to('.portfolio .inner', { rotateX:0, opacity:1 })
+    .to('.contact', { y:0, delay:2, duration:3 });
 
 
     function zIndex(target, value){

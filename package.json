@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@studio-freight/lenis": "^1.0.42",
     "@sveltejs/adapter-netlify": "^4.1.0",

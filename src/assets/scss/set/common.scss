@@ -26,28 +26,6 @@ body{
     color:#272727;
     @include var.fontWeight(400)
 }
-.btn_top{
-    position:fixed;
-    bottom:3rem;
-    right:3rem;
-    overflow:hidden;
-    z-index:5;
-    .line{
-        @include var.absDefault();
-        width:100%;
-        height:100%;
-        z-index:-1
-    }
-    .tail{
-        stroke-dasharray:200px;
-        stroke-dashoffset:-200px;
-        transform:rotate(-0.25turn);
-        transform-origin:50%
-    }
-    button{
-        @include var.circle(6rem)
-    }
-}
 .pin{
     position:relative;
     width:100%;
@@ -68,4 +46,11 @@ section{
 }
 .title{
     @include var.setFont(6rem, 700)
+}
+.footer{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:3rem;
+    text-align:center
 }

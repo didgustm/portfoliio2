@@ -1,0 +1,1 @@
+<footer class="footer">Copyright ©2024. my portfolio</footer>

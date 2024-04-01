@@ -64,7 +64,7 @@
         }
         .dot{
             @include var.circle(0.8rem);
-            background:var.$theme
+            background:var.$dblue
         }
         .date{
             min-width:150px
@@ -75,18 +75,18 @@
         grid-template-columns:repeat(4, 1fr);
         gap:2rem;
         li{
-            --dot:#ED6075;
+            --dot:#2F4858;
             flex-shrink:0;
             position:relative;
             @include var.flex(space-between, flex-start, wrap, column);
             padding:5rem 4rem 3rem;
             background:#fff;
-            border:1px solid var.$theme;
+            border:1px solid var.$dblue;
             opacity:0;
             transform:translateY(50%);
             &:nth-child(even){
                 --dot:#fff;
-                background:var.$theme;
+                background:var.$dblue;
                 color:#fff;
                 transform:translateY(-50%)
             }

@@ -1,0 +1,78 @@
+@use '@scss/set/variable' as var;
+
+.portfolio{
+    background:var.$light;
+    perspective:1280px;
+    opacity:0;
+    z-index:-1;
+    .inner{
+        @include var.flex(center, flex-start, wrap, column);
+        gap:8rem;
+        transform:rotateX(45deg);
+        opacity:0
+    }
+    .list{
+        @include var.flex(flex-start, flex-start, nowrap, row);
+        gap:7rem;
+    }
+    .box{
+        position:relative;
+        flex-shrink:0;
+        background:#fff;
+        border-radius:2rem;
+        overflow:hidden;
+        button{
+            width:100%;
+            height:100%;
+            min-height:30rem;
+            &:hover{
+                .site_info{
+                    color:#fff
+                }
+                .name{
+                    transform:translateY(-3.2rem)
+                }
+                .hide_txt{
+                    opacity:1
+                }
+                .bg{
+                    opacity:1
+                }
+            }
+        }
+        .img{
+            transition:filter 0.4s
+        }
+        .site_info{
+            position:relative;
+            @include var.flexDefault();
+            padding:2rem 3rem;
+            @include var.setFont(1.4rem, 300);
+            transition:transform 0.4s;
+            z-index:1
+        }
+        .name{
+            @include var.setFont(2rem, 500);
+            transition:transform 0.4s
+        }
+        .coment{
+            bottom:8rem
+        }
+        .hide_txt{
+            position:absolute;
+            opacity:0;
+            transition:opacity 0.4s;
+        }
+        .icon{
+
+        }
+        .bg{
+            @include var.absDefault();
+            right:0;
+            bottom:0;
+            background:rgba(0,0,0,.5);
+            opacity:0;
+            transition:opacity 0.4s
+        }
+    }
+}
