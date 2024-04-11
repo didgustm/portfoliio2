@@ -18,37 +18,35 @@ export const scroll = () => {
     let pin = gsap.timeline({
         scrollTrigger: {
             trigger:'.pin',
-            scrub:1.5,
+            scrub:1,
             pin:!0,
             onUpdate ({ progress }){
                 gsap.to('.tail', { strokeDashoffset:540 - progress*540 })
-                // console.log(progress)
             },
             end:`+=${document.querySelector('.pin').offsetHeight * 4}`
         },
-        duration:2
+        ease: 'none'
     });
-    pin.to('.visualBall', { r:600 })
-    .to('.barba', { scale:6, }, '<')
-    .to('.barba', { scale:10, opacity:1, duration:0.2 })
+    pin.to('.visualBall', { r:600, duration:4 })
+    .to('.barba', { scale:6 }, '<')
+    .to('.barba', { scale:10, opacity:1, delay:1 })
     .to('.about', { opacity:1, 
         onComplete: () => zIndex('about', 1),
         onReverseComplete: () => zIndex('about', -1)
     }, '<')
     .to('.visual_in', { opacity:0 })
-    .to('.barbaB', { scale:1, opacity:.5 })
-    .to('.career', { opacity:1, yPercent:-50, duration:2 }, '-=0.2')
-    .to('.career', { opacity:0, yPercent:-100, delay:2, duration:2 })
-    .to('.about .top', { y:0, duration:2 }, '<')
-    .to('.skills li', { opacity:1, y:0, yPercent:0, duration:2 })
-    .to('.about .inner', { rotateX:45, delay:2 })
-    .to('.about', { opacity:0, 
+    .to('.barbaB', { scale:1, opacity:.5, duration:4 })
+    .to('.career', { opacity:1, yPercent:-50, duration:3 }, '-=0.2')
+    .to('.career', { opacity:0, yPercent:-100, delay:2, duration:3 })
+    .to('.about .top', { y:0, duration:4 }, '<')
+    .to('.skills li', { opacity:1, y:0, yPercent:0, duration:4 })
+    .to('.about .inner', { rotateX:45, opacity:0, delay:4, duration:3,
         onComplete: () => zIndex('portfolio', 1),
         onReverseComplete: () => zIndex('portfolio', -1)
-    }, '<')
+    })
     .to('.portfolio', { opacity:1 }, '<')
-    .to('.portfolio .inner', { rotateX:0, opacity:1 })
-    .to('.contact', { y:0, delay:2, duration:3 });
+    .to('.portfolio .inner', { rotateX:0, opacity:1, duration:3 })
+    .to('.contact', { y:0, delay:3, duration:4 });
 
 
     function zIndex(target, value){

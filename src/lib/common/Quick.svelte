@@ -20,21 +20,25 @@
                 <a href="">
                     <Fa icon={ faHouse } size="1.2x" />
                 </a>
+                <div class="balloon">Home</div>
             </li>
             <li>
                 <a href="">
                     <Fa icon={ faUser } size="1.2x" />
                 </a>
+                <div class="balloon">About</div>
             </li>
             <li>
                 <a href="">
                     <Fa icon={ faListUl } size="1.2x" />
                 </a>
+                <div class="balloon">Portfolio</div>
             </li>
             <li>
                 <a href="">
                     <Fa icon={ faMessage } size="1.2x" />
                 </a>
+                <div class="balloon">Contact</div>
             </li>
         </ul>
     </nav>

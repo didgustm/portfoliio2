@@ -4,10 +4,9 @@
     position:fixed;
     top:calc(50% - 114px);
     right:3rem;
-    padding:3rem 2rem;
+    padding:1.5rem 0;
     text-align:center;
     color:var.$dark;
-    overflow:hidden;
     transform:translateX(50%);
     opacity:0;
     animation:fade 0.8s ease 1s forwards;
@@ -23,7 +22,38 @@
         stroke-dasharray:540px;
         stroke-dashoffset:540px
     }
-    li:nth-child(n+2){
-        margin-top:3rem
+    li{
+        position:relative;
+        padding:1.5rem 2rem;
+        &:hover{
+            .balloon{
+                visibility:visible;
+                opacity:1
+            }
+        }
+        .balloon{
+            position:absolute;
+            right:85%;
+            top:50%;
+            transform:translateY(-50%);
+            @include var.setFont(1.4rem, 500);
+            padding:0.5rem 1rem;
+            border-radius:0.5rem;
+            color:#fff;
+            background:var.$theme;
+            visibility:hidden;
+            opacity:0;
+            transition:opacity 0.4s;
+            z-index:-1;
+            &::after{
+                content:"";
+                position:absolute;
+                right:-4px;
+                top:calc(50% - 6px);
+                border-left:6px solid var.$theme;
+                border-top:6px solid transparent;
+                border-bottom:6px solid transparent
+            }
+        }
     }
 }

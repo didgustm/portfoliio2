@@ -2,14 +2,22 @@
     import isabang3 from '@img/thumnail/isabang3.jpg'
     import fasttrack from '@img/thumnail/fasttrack.jpg'
     import evlabs from '@img/thumnail/evlabs.jpg'
+    import { register } from 'swiper/element/bundle'
     import Fa from 'svelte-fa'
     import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+    register();
 </script>
 
 <div class="grid">
-    <ul class="list">
-        <li class="box">
-            <button>
+    <swiper-container
+        slides-per-view={`auto`}
+        space-between={40}
+        speed={700}
+        scrollbar={true}
+    >
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ isabang3 }" alt="">
                 </div>
@@ -23,9 +31,9 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-        <li class="box">
-            <button>
+        </swiper-slide>
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ fasttrack }" alt="">
                 </div>
@@ -39,9 +47,9 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-        <li class="box">
-            <button>
+        </swiper-slide>
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ evlabs }" alt="">
                 </div>
@@ -55,9 +63,9 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-        <li class="box">
-            <button>
+        </swiper-slide>
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ isabang3 }" alt="">
                 </div>
@@ -71,9 +79,9 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-        <li class="box">
-            <button>
+        </swiper-slide>
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ fasttrack }" alt="">
                 </div>
@@ -87,9 +95,9 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-        <li class="box">
-            <button>
+        </swiper-slide>
+        <swiper-slide>
+            <button class="box">
                 <div class="img">
                     <img src="{ evlabs }" alt="">
                 </div>
@@ -103,6 +111,6 @@
                 </div>
                 <div class="bg"></div>
             </button>
-        </li>
-    </ul>
+        </swiper-slide>
+    </swiper-container>
 </div>

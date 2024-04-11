@@ -78,7 +78,7 @@
     .barba{
         @include var.absDefault(calc((100% - 11rem) * 0.5), calc(50% - 11rem));
         @include var.circle(22rem);
-        background:var.$dark;
+        background:var.$dblue;
         opacity:0;
         z-index:2
     }
